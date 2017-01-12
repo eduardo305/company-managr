@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 
+import CardGallery from '../containers/card-gallery';
+
 export default class App extends Component {
   render() {
     return (
-      <div>React simple starter</div>
+      <div>
+        <CardGallery />
+      </div>
     );
   }
 }
