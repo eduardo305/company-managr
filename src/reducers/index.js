@@ -4,7 +4,7 @@ import ClientsReducer from './clients-reducer';
 import ActiveClient from './active-client-reducer';
 
 const rootReducer = combineReducers({
-  all: ClientsReducer,
+  clients: ClientsReducer,
   activeClient: ActiveClient
 });
 

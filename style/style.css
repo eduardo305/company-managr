@@ -1,0 +1,38 @@
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.gallery {
+
+}
+
+.gallery li {
+  margin: 10px;
+  display: inline-block;
+}
+
+.wrapper {
+  width: 100%;
+  border: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.wrapper .photo {
+  width: 80px;
+  align-self: center;
+  border-radius: 50%
+}
+
+.wrapper .description {
+  align-self: center;
+  padding: 10px 0;
+}
