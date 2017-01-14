@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchClient } from '../actions/index';
+import Spinner from '../components/spinner';
 
 class ClientDetail extends Component {
 
@@ -10,7 +11,7 @@ class ClientDetail extends Component {
 
   render() {
     if (!this.props.client) {
-      return <div>loading...</div>
+      return <Spinner />
     }
 
     const { client } = this.props;

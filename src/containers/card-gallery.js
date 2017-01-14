@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import { fetchClients } from '../actions/index';
 import Card from './card';
+import Spinner from '../components/spinner';
 
 class CardGallery extends Component {
 
@@ -12,7 +13,7 @@ class CardGallery extends Component {
 
   renderCards() {
     if ( !this.props.clients ) {
-      return <div>loading...</div>
+      return <Spinner />
     }
 
     const cards = this.props.clients.map((person) => {

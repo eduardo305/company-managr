@@ -80,3 +80,12 @@ header {
 .header-wrapper h4 {
   font-family: cursive;
 }
+
+.spinner-wrapper {
+  width: 80px;
+  margin: auto;
+}
+
+.spinner-wrapper .spinner {
+  width: 80px;
+}
