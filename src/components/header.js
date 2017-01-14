@@ -7,7 +7,10 @@ class Header extends Component {
       <header>
         <div className="header-wrapper">
           <h4>Managr</h4>
-          <Link to="/">Home</Link>
+          <div className="menu-wrapper">
+            <Link to="/">Home</Link>
+            <Link to="/clients/location">Clients Location</Link>
+          </div>
         </div>
       </header>
     );
