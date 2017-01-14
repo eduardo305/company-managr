@@ -11,3 +11,12 @@ export function fetchClients() {
     payload: request
   }
 }
+
+export function fetchClient(id) {
+  const request = axios.get(`${API_ROOT}/${id}`);
+
+  return {
+    type: 'FETCH_CLIENT_SUCCESS',
+    payload: request
+  }
+}

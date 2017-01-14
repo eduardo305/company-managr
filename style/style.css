@@ -3,6 +3,10 @@ ul {
   list-style-type: none;
 }
 
+.app-wrapper {
+  width: 100%;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -35,4 +39,44 @@ ul {
 .wrapper .description {
   align-self: center;
   padding: 10px 0;
+}
+
+.client-details-wrapper {
+  font-family: serif;
+}
+
+.client-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  margin: 0;
+}
+
+.client-hero .name {
+  padding: 10px;
+}
+
+.thumbnail-photo {
+  border-radius: 50%;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+header {
+  height: 80px;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  flex-direction: column;
+}
+
+.header-wrapper h4 {
+  font-family: cursive;
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { fetchClients } from '../actions/index';
+import Card from './card';
 
 class CardGallery extends Component {
 
@@ -19,14 +20,7 @@ class CardGallery extends Component {
         <li
           key={ person._id }>
 
-          <a>
-            <div className='wrapper'>
-                <img className="photo" src={ person.picture.large } />
-                <div className='description'>
-                  <span>{ person.name.first }</span>
-                </div>
-            </div>
-          </a>
+          <Card person={ person }/>
         </li>);
     });
 
