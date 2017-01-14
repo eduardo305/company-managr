@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { FETCH_CLIENTS_SUCCESS } from './action_types';
+import { FETCH_CLIENTS_SUCCESS, FETCH_CLIENTS_ERROR, FETCH_CLIENTS } from './action_types';
 
 const API_ROOT = 'https://api-react-course.herokuapp.com/api/v1/users';
 
@@ -13,10 +13,21 @@ export function fetchClients() {
 }
 
 export function fetchClient(id) {
-  const request = axios.get(`${API_ROOT}/${id}`);
+  return function(dispatch) {
+    dispatch({ type: 'FETCH_CLIENT' });
 
-  return {
-    type: 'FETCH_CLIENT_SUCCESS',
-    payload: request
+    axios.get(`${API_ROOT}/${id}`)
+      .then(response => {
+        dispatch({
+          type: 'FETCH_CLIENT_SUCCESS',
+          payload: response
+        });
+      })
+      .catch(error => {
+        dispatch({
+          type: 'FETCH_CLIENT_ERROR',
+          payload: error
+        })
+      });
   }
 }

@@ -10,7 +10,7 @@ class ClientDetail extends Component {
   }
 
   render() {
-    if (!this.props.client) {
+    if (this.props.pending) {
       return <Spinner />
     }
 
@@ -43,7 +43,8 @@ class ClientDetail extends Component {
 
 function mapStateToProps(state) {
   return {
-    client: state.activeClient.selected
+    client: state.activeClient.selected,
+    pending: state.activeClient.pending
   }
 }
 

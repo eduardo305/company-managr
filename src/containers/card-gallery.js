@@ -12,7 +12,7 @@ class CardGallery extends Component {
   }
 
   renderCards() {
-    if ( !this.props.clients ) {
+    if ( !this.props.clients) {
       return <Spinner />
     }
 
@@ -37,7 +37,8 @@ class CardGallery extends Component {
 
 function mapStateToProps(state) {
   return {
-    clients: state.clients.all
+    clients: state.clients.all,
+    pending: state.pending
   }
 }
 
